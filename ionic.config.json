@@ -1,0 +1,7 @@
+{
+  "name": "starter-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
