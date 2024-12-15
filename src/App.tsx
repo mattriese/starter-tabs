@@ -54,7 +54,7 @@ const App: React.FC = () => (
         <Route path="/" exact={true}>
           <Redirect to="/first-route" />
         </Route>
-        <Route path="/first-route" exact={true}>
+        <Route path="/first-route">
           <IonTabs>
             <IonRouterOutlet>
               <Route
@@ -83,7 +83,7 @@ const App: React.FC = () => (
             </IonTabBar>
           </IonTabs>
         </Route>
-        <Route path="/second-route" exact={true}>
+        <Route path="/second-route">
           {/** another route also has a tabs router */}
           <IonTabs>
             <IonRouterOutlet>
