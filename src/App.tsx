@@ -42,7 +42,6 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
-import ExploreContainer from './components/ExploreContainer';
 import './theme/variables.css';
 
 setupIonicReact();
@@ -77,32 +76,6 @@ const App: React.FC = () => (
                 <IonLabel>Tab 1</IonLabel>
               </IonTabButton>
               <IonTabButton tab="tab2" href="/first-route/tab2">
-                <IonIcon aria-hidden="true" icon={ellipse} />
-                <IonLabel>Tab 2</IonLabel>
-              </IonTabButton>
-            </IonTabBar>
-          </IonTabs>
-        </Route>
-        <Route path="/second-route" exact={true}>
-          {/** another route also has a tabs router */}
-          <IonTabs>
-            <IonRouterOutlet>
-              <Route exact path="/second-route/tab1">
-                <ExploreContainer name="Tab 1" />
-              </Route>
-              <Route exact path="/second-route/tab2">
-                <ExploreContainer name="Tab 2" />
-              </Route>
-              <Route exact path="/second-route">
-                <Redirect to="/second-route/tab1" />
-              </Route>
-            </IonRouterOutlet>
-            <IonTabBar slot="bottom">
-              <IonTabButton tab="tab1" href="/second-route/tab1">
-                <IonIcon aria-hidden="true" icon={triangle} />
-                <IonLabel>Tab 1</IonLabel>
-              </IonTabButton>
-              <IonTabButton tab="tab2" href="/second-route/tab2">
                 <IonIcon aria-hidden="true" icon={ellipse} />
                 <IonLabel>Tab 2</IonLabel>
               </IonTabButton>
