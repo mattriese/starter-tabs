@@ -57,13 +57,17 @@ const App: React.FC = () => (
         <Route path="/first-route" exact={true}>
           <IonTabs>
             <IonRouterOutlet>
-              <Route exact path="first-route/tab1">
-                <Tab1 />
-              </Route>
-              <Route exact path="first-route/tab2">
-                <Tab2 />
-              </Route>
-              <Route exact path="/">
+              <Route
+                exact
+                path="/first-route/tab1"
+                render={() => <Tab1 />}
+              ></Route>
+              <Route
+                exact
+                path="/first-route/tab2"
+                render={() => <Tab2 />}
+              ></Route>
+              <Route exact path="/first-route">
                 <Redirect to="/first-route/tab1" />
               </Route>
             </IonRouterOutlet>
